@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import FeedbackList from "./components/FeedbackList";
+import Header from "./components/Header";
+import FeedbackData from "./data/FeedbackData";
+import Card from "./components/shared/Card";
 
 const App = () => {
+  const [feedback, setFeedback] = useState(FeedbackData);
+
   return (
-    <div>
-      <div>Hello World</div>
-    </div>
+    <>
+      <Header text={"Hello World"}></Header>
+      <FeedbackList feedback={feedback} />
+    </>
   );
 };
 
